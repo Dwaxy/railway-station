@@ -1,6 +1,6 @@
 ---
 caffe:
-  description: its a very nice caffe
+  description: 'its a very nice cafe, it really is'
   heading: Caffe title
   image: /img/dsc06431.jpg
 collectibles:
