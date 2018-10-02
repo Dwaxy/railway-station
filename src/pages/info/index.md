@@ -11,5 +11,6 @@ groceries:
   description: eat your greens
   heading: blabla
   image: /img/products-full-width.jpg
+key: info-section
 ---
 

@@ -26,48 +26,31 @@ export default class Index extends Component {
   
 }
 
-//export default Index
-// export const pageQuery = graphql`
-  // query IndexQuery {
-  //   allMarkdownRemark(
-  //     sort: { order: DESC, fields: [frontmatter___date] },
-  //     filter: { frontmatter: { templateKey: { eq: "blog-post" } }}
-  //   ) {
-  //     edges {
-  //       node {
-  //         excerpt(pruneLength: 400)
-  //         id
-  //         fields {
-  //           slug
-  //         }
-  //         frontmatter {
-  //           title
-  //           templateKey
-  //           date(formatString: "MMMM DD, YYYY")
-  //         }
-  //       }
-  //     }
-  //   }
-  // }
-// `
-
 export const IndexTemplateQuery = graphql`
-  query IndexQuery {
-    allMarkdownRemark {
-      edges {
-        node {
-          id
-          frontmatter {
-            title
-            templateKey
-            main {
-              heading
-              description
-            }
-           
+query IndexQuery {
+  allMarkdownRemark(filter: {frontmatter: {key: {eq: "info-section"}}}) {
+    edges {
+      node {
+        frontmatter {
+          key
+          caffe {
+            description
+            heading
+            image
+          }
+          collectibles {
+            description
+            heading
+            image
+          }
+          groceries {
+            description
+            heading
+            image
           }
         }
       }
     }
   }
+}
 `
