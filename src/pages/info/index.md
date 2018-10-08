@@ -1,8 +1,9 @@
 ---
+key: info-section
 cafe:
-  description: 'its a very nice cafe, it really is'
-  heading: Cafe title
-  image: /img/jumbotron.jpg
+  description: 'its a very nice cafe, it really is. very nice'
+  heading: Cafe title that has been updated live
+  image: /img/08dux.jpg
   name: cafe
 collectibles:
   description: 'many things to collect '
@@ -14,6 +15,5 @@ groceries:
   heading: blabla
   image: /img/products-full-width.jpg
   name: groceries
-key: info-section
 ---
 
