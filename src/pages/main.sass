@@ -1,72 +1,185 @@
 
 // TODO
 
-// install cms
-// make data structer for menu and info cards
-// google maps
-// group ph
-// other images
 // logo
+// Images (torless). Use me or some else?
+// fonts
+// maps API key and billing rundown 
 
+// work on next 
+// maps API
+// finilise styles
+// footer, info. FB meta
 
+@import url('https://fonts.googleapis.com/css?family=Diplomata+SC')
+//font-family: 'Diplomata SC', cursive
+
+$white: #f5eded
+
+$xs: 24em // extra small
+$s: 35em  // small
+$m: 55em  // middle
+$l: 62em   // large
+
+@keyframes fadein 
+  from 
+    opacity: 0
+    margin-left: -20px
+  to 
+    opacity: 1
+    margin-left: 0px
+    
 
 html, body
   margin: 0
   padding: 0
   box-sizing: border-box
   min-height: 100%
+  list-style: none
+  *
+    letter-spacing: 1px
   
 #holder
   //header
   overflow: hidden
   #header
     width: 100%
-    height: 90vh
-  #info
-    width: 100%
-    height: 500px
+    max-height: 700px
+    height: 100vh
+    background-image: url(../img/mainPlaceholder.jpeg)
+    background-size: cover
+    background-repeat: no-repeat
+    object-fit: cover
+  .infoOpenhoursHolder
+    background-image: url(../img/wood1.jpg)
+    background-size: cover
+    height: 900px
     position: relative
-    .menu
+    div
+      background-image: none
+    @media screen and (max-width: 45em)
+      height: 1200px !important
+    #info
       width: 100%
-      height: 60px
-      display: flex
-      flex-wrap: wrap
-      justify-content: center
-      span
-        width: 100px
-        display: flex
-        justify-content: center
-        line-height: 60px
-    .card
-      size: 80%
-      margin: 0 auto
-      display: inline-block
-      left: center
-      display: flex
-      .left, .right
-        width: 50%
-        height: 100%
-        background-color: grey
-        //border: 1px solid black
-      .right
-        float: right
-        background-color: pink
-  #openHours
-    margin: 30px
-    .holder
-      max-width: 300px
-      margin: 0 auto
-    p
-      font-size: 30px
-    .dates
-      margin: 0 auto
-      border-left: 1px solid black
-      margin: 30px
-      span
+      height: 500px
+      position: relative
+      .menu
+        margin: 0 auto
+        height: 60px
         width: 100%
-        display: block
-        padding: 30px
-        padding-left: 30px
+        display: flex
+        flex-wrap: wrap
+        justify-content: space-evenly
+        left: center
+        top: -60px
+        box-shadow: 0px 12px 26px -8px rgba(0, 0, 0, 0.75)
+        span
+          width: 100px
+          height: 60px
+          display: flex
+          justify-content: center
+          line-height: 60px
+          cursor: pointer
+          color: $white
+          font-size: responsive
+          min-font-size: 16px
+          box-sizing: border-box
+          text-transform: capitalize
+        .selected
+          border-bottom: 4px solid $white
+      .card
+        size: 80%
+        max-width: 1000px
+        margin: 0 auto
+        display: inline-block
+        left: center
+        margin-top: 60px
+        display: flex
+        color: $white
+        //flex-wrap: wrap
+        // box-shadow: 0px 17px 40px -7px rgba(0,0,0,0.75)
+        @media screen and (max-width: 45em)
+          display: block
+          width: 100%
+          box-shadow: none 
+          .left, .right
+            float: none
+            margin: 0 auto
+            padding: 0 !important
+        .left, .right
+          width: 50%
+          min-width: 320px
+          height: 100%
+          //background-color: green
+          //background-color: $white
+          // @media screen and (max-width: 5em) 
+          //   min-width: 100%
+          //   height: 300px
+          //   margin: 0 auto
+          //   float: none
+        .left
+          display: flex
+          justify-content: center
+          flex-direction: column
+          padding-right: 30px
+          //border-top-left-radius: 10px
+          //border-bottom-left-radius: 10px
+          img
+            object-fit: cover
+            max-height: 300px
+            min-width: 100%
+        .right
+          float: right
+          padding-left: 30px
+          //border-top-right-radius: 10px
+          //border-bottom-right-radius: 10px
+          h3
+            font-size: 25px
+            text-transform: capitalize
+            letter-spacing: 2px
+            //margin-top: 0
+            padding-top: 0
+            &:before 
+              content: ''
+              display: block
+              width: 100%
+              position: relative
+              top: 40px
+              border: none
+              border-bottom: 2px solid $white
+              animation: fadein 1.3s forwards
+              transition: all 1s linear 
+          h3, p
+            text-align: center
+            //padding: 30px
+            max-width: 300px
+          p
+            padding-top: 0
+          @media screen and (max-width: 45em)
+            float: none
+            margin-bottom: -20px
+    #openHours
+      padding: 30px
+      color: $white
+      height: 300px
+      bottom: 0
+      left: center
+      .holder
+        max-width: 300px
+        margin: 0 auto
+      p
+        font-size: 30px
+      .dates
+        margin: 0 auto
+        border-left: 1px solid $white
+        margin: 30px
+        margin-left: 90px
+        span
+          width: 100%
+          display: block
+          padding: 30px
+          padding-left: 30px
+          font-size: 20px
   #groupPh, #map
     width: 100%
     height: 500px
@@ -76,4 +189,3 @@ html, body
     height: 80px
     position: fixed
     bottom: 0
-  

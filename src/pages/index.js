@@ -1,24 +1,35 @@
 import React, {Component} from 'react'
 import Helmet from 'react-helmet'
 import { graphql } from 'gatsby'
-// import Header from '../components/header.js'
-// //import Info from '../components/info.js'
-// import OpenHours from '../components/openHours.js'
-// import GroupPh from '../components/groupPh.js'
-// import Map from '../components/map.js'
-// import Footer from '../components/footer.js'
+import Header from '../components/header.js'
+import Info from '../components/info.js'
+import OpenHours from '../components/openHours.js'
+import GroupPh from '../components/groupPh.js'
+import Map from '../components/map.js'
+import Footer from '../components/footer.js'
 
 import './main.sass'
 
 export default class Index extends Component {
   // constructor(props) {
   //   super(props)
-  // }
+  // 
 
   render() {
+    
+    const infoData = this.props.data.markdownRemark.frontmatter
+    
     return (
       <section id="holder">
-        <div>working</div>
+        <Header />
+        <div className="infoOpenhoursHolder">
+          <Info data={infoData} />
+          <OpenHours />
+        </div>
+        <GroupPh />
+        <Map />
+        
+        <Footer />
         
       </section>
     )
@@ -28,29 +39,29 @@ export default class Index extends Component {
 
 export const IndexTemplateQuery = graphql`
 query IndexQuery {
-  allMarkdownRemark(filter: {frontmatter: {key: {eq: "info-section"}}}) {
-    edges {
-      node {
-        frontmatter {
-          key
-          caffe {
-            description
-            heading
-            image
-          }
-          collectibles {
-            description
-            heading
-            image
-          }
-          groceries {
-            description
-            heading
-            image
-          }
-        }
+  markdownRemark {
+    frontmatter {
+      key
+      groceries {
+        description
+        heading
+        image
+        name
+      }
+      cafe {
+        description
+        heading
+        image
+        name
+      }
+      collectibles {
+        description
+        heading
+        image
+        name
       }
     }
   }
 }
+
 `

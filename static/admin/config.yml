@@ -42,15 +42,21 @@ collections:
         #  - {label: "Template Key", name: "templateKey", widget: "hidden", default: "about-page"}
         #  - {label: "Template Key", name: "templateKey", widget: "hidden", default: "product-page"}
           - {label: "Key", name: "key", widget: "hidden", default: "info-section"}
-          - {label: Caffe, name: caffe, widget: object, fields: [
-              {label: Heading, name: heading, widget: string}, {label: Description, name: description, widget: text}, 
-              {label: Image, name: image, widget: image}
+          - {label: Cafe, name: cafe, widget: object, fields: [
+              {label: Heading, name: heading, widget: string}, 
+              {label: Description, name: description, widget: text}, 
+              {label: Image, name: image, widget: image},
+              {label: "Name", name: "name", widget: "hidden", default: "cafe"}
             ]}
           - {label: Collectibles, name: collectibles, widget: object, fields: [
-              {label: Heading, name: heading, widget: string}, {label: Description, name: description, widget: text}, 
-              {label: Image, name: image, widget: image}
+              {label: Heading, name: heading, widget: string}, 
+              {label: Description, name: description, widget: text}, 
+              {label: Image, name: image, widget: image},
+              {label: "Name", name: "name", widget: "hidden", default: "collectibles"}
             ]}
           - {label: Groceries, name: groceries, widget: object, fields: [
-              {label: Heading, name: heading, widget: string}, {label: Description, name: description, widget: text}, 
-              {label: Image, name: image, widget: image}
+              {label: Heading, name: heading, widget: string}, 
+              {label: Description, name: description, widget: text}, 
+              {label: Image, name: image, widget: image},
+              {label: "Name", name: "name", widget: "hidden", default: "groceries"}
             ]}

@@ -1,59 +1,59 @@
-
 import React, { Component } from 'react'
-
 //info for each card should come from the cms somehow
 //like in the netlify cms blog example
 
-const infoData = (props) = (
-  <div className="right">
-    <h3>{props.title}</h3>
-    <ul>{props.points.map( point => (
-      <li>{point}</li>
-      ))}
-    </ul>
+const InfoData = (props) => (
+  <div className="card">
+    <div className="left">
+      <img src={props.data.image} alt=""/>
+    </div>
+    <div className="right">
+      <h3>{props.data.heading}</h3>
+      <p>{props.data.description}</p>
+    </div>
   </div>
 )
 
-export class Info extends Component {
+class Info extends Component {
   constructor(props) {
-    super(props);
-    this.state = { 
-      menuItems: 
-        [
-          "Caffe",
-          "Coll",
-          "Gros",
-        ],
+    super(props)
+    this.state = {
+      currentItem: this.props.data.cafe
     }
+    
   }
   
-  changeCard = (item) => {
-    this.setState({})
+  toogleInfo = (key) => {
+    this.setState({currentItem: this.props.data[key]})
   }
   
-  render() {  
+  render() {
+    const infoItems = []
+  
+    Object.keys(this.props.data).map ( i => {
+      infoItems.push(i)
+    })
+    
     return (
       <section id="info">
       
         <div className="menu">
-          {this.state.menuItems.map( i => (
-            <span key={i} onClick={this.changeCard.bind(this, i)}>{i}</span>  
-            
-          ))}
+          {infoItems.map( i => {
+            if (i === "key") return
+            return (
+              <span 
+                key={i} 
+                onClick={() => this.toogleInfo(i)}
+                className={this.props.data[i].name === this.state.currentItem.name ? "selected" : ""}
+                >{i}</span>  
+            )
+          })}
         </div>
+         
+        <InfoData data={this.state.currentItem}/>
         
-        <div className="card">
-          <div className="left"></div>
-          
-          <infoData
-            title
-            points
-          />
-          
-        </div>
-      
       </section>
-    )
+    )  
   }
 }
 
