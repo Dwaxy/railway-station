@@ -4,13 +4,14 @@ import React, { Component } from 'react'
 
 const InfoData = (props) => (
   <div className="card">
-    <div className="left">
-      <img src={props.data.image} alt=""/>
-    </div>
-    <div className="right">
+    
+    <img src={props.data.image} alt=""/>
+
+    <div className="card-text">
       <h3>{props.data.heading}</h3>
       <p>{props.data.description}</p>
     </div>
+    
   </div>
 )
 
@@ -37,18 +38,21 @@ class Info extends Component {
     return (
       <section id="info">
       
-        <div className="menu">
+        <ul className="menu">
           {infoItems.map( i => {
             if (i === "key") return
             return (
-              <span 
+              <li 
                 key={i} 
                 onClick={() => this.toogleInfo(i)}
-                className={this.props.data[i].name === this.state.currentItem.name ? "selected" : ""}
-                >{i}</span>  
+              >
+                <span  className={this.props.data[i].name === this.state.currentItem.name ? "selected" : ""}>
+                  {i}
+                </span>
+              </li>  
             )
           })}
-        </div>
+        </ul>
          
         <InfoData data={this.state.currentItem}/>
         

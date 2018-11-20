@@ -21,6 +21,9 @@ $s: 35em  // small
 $m: 55em  // middle
 $l: 62em   // large
 
+//colors
+$main-black: #ffff
+
 @keyframes fadein 
   from 
     opacity: 0
@@ -38,6 +41,7 @@ html, body
   list-style: none
   *
     letter-spacing: 1px
+    box-sizing: border-box
   
 #holder
   //header
@@ -46,13 +50,16 @@ html, body
     width: 100%
     max-height: 700px
     height: 100vh
-    background-image: url(../img/mainPlaceholder.jpeg)
+    //background-image: url(../img/mainPlaceholder.jpeg)
+    background-image: url(../img/IMG_7524.jpg)
     background-size: cover
     background-repeat: no-repeat
     object-fit: cover
   .infoOpenhoursHolder
-    background-image: url(../img/wood1.jpg)
-    background-size: cover
+    //background-image: url(../img/wood1.jpg)
+    // background-image: url(../img/IMG_7483.jpg)
+    // background-size: cover
+    background-color: black
     height: 900px
     position: relative
     div
@@ -64,100 +71,109 @@ html, body
       height: 500px
       position: relative
       .menu
-        margin: 0 auto
-        height: 60px
-        width: 100%
-        display: flex
-        flex-wrap: wrap
-        justify-content: space-evenly
-        left: center
-        top: -60px
-        box-shadow: 0px 12px 26px -8px rgba(0, 0, 0, 0.75)
-        span
-          width: 100px
-          height: 60px
-          display: flex
-          justify-content: center
-          line-height: 60px
-          cursor: pointer
-          color: $white
-          font-size: responsive
-          min-font-size: 16px
-          box-sizing: border-box
-          text-transform: capitalize
-        .selected
-          border-bottom: 4px solid $white
-      .card
-        size: 80%
-        max-width: 1000px
-        margin: 0 auto
-        display: inline-block
-        left: center
-        margin-top: 60px
-        display: flex
-        color: $white
-        //flex-wrap: wrap
-        // box-shadow: 0px 17px 40px -7px rgba(0,0,0,0.75)
-        @media screen and (max-width: 45em)
-          display: block
+        float: left
+        min-width: 300px
+        max-width: 500px
+        width: 30%
+        height: 100%
+        background-color: red
+        margin: 0
+        padding: 0
+        li
           width: 100%
-          box-shadow: none 
-          .left, .right
-            float: none
-            margin: 0 auto
-            padding: 0 !important
-        .left, .right
-          width: 50%
-          min-width: 320px
-          height: 100%
-          //background-color: green
-          //background-color: $white
-          // @media screen and (max-width: 5em) 
-          //   min-width: 100%
-          //   height: 300px
-          //   margin: 0 auto
-          //   float: none
-        .left
-          display: flex
-          justify-content: center
-          flex-direction: column
-          padding-right: 30px
-          //border-top-left-radius: 10px
-          //border-bottom-left-radius: 10px
-          img
-            object-fit: cover
-            max-height: 300px
-            min-width: 100%
-        .right
-          float: right
-          padding-left: 30px
-          //border-top-right-radius: 10px
-          //border-bottom-right-radius: 10px
-          h3
-            font-size: 25px
-            text-transform: capitalize
-            letter-spacing: 2px
-            //margin-top: 0
-            padding-top: 0
-            &:before 
-              content: ''
-              display: block
-              width: 100%
-              position: relative
-              top: 40px
-              border: none
-              border-bottom: 2px solid $white
-              animation: fadein 1.3s forwards
-              transition: all 1s linear 
-          h3, p
-            text-align: center
-            //padding: 30px
-            max-width: 300px
-          p
-            padding-top: 0
-          @media screen and (max-width: 45em)
-            float: none
-            margin-bottom: -20px
+          height: 60px
+          list-style: none
+          text-align: center
+          cursor: pointer
+          line-height: 30px
+          color: $main-black
+          font-size: responsive
+          font-family: 'Diplomata SC', cursive
+          min-font-size: 16px
+          text-transform: capitalize
+          span
+            height: 100%
+          .selected
+            border-bottom: 4px solid $white
+      .card
+        width: 70%
+        height: 100%
+        float: right
+        background-color: blue
+        display: flex
+        img
+          object-fit: cover
+          max-height: 300px
+          min-width: 100%
+        // margin: 0 auto
+        // display: inline-block
+        // left: center
+        // margin-top: 60px
+        // display: flex
+        // color: $white
+        // display: none //----
+        // //flex-wrap: wrap
+        // // box-shadow: 0px 17px 40px -7px rgba(0,0,0,0.75)
+        // @media screen and (max-width: 45em)
+        //   display: block
+        //   width: 100%
+        //   box-shadow: none 
+        //   .left, .right
+        //     float: none
+        //     margin: 0 auto
+        //     padding: 0 !important
+        // .left, .right
+        //   width: 50%
+        //   min-width: 320px
+        //   height: 100%
+        //   //background-color: green
+        //   //background-color: $white
+        //   // @media screen and (max-width: 5em) 
+        //   //   min-width: 100%
+        //   //   height: 300px
+        //   //   margin: 0 auto
+        //   //   float: none
+        // .left
+        //   display: flex
+        //   justify-content: center
+        //   flex-direction: column
+        //   padding-right: 30px
+        //   //border-top-left-radius: 10px
+        //   //border-bottom-left-radius: 10px
+        //   img
+        //     object-fit: cover
+        //     max-height: 300px
+        //     min-width: 100%
+        // .right
+        //   float: right
+        //   padding-left: 30px
+        //   //border-top-right-radius: 10px
+        //   //border-bottom-right-radius: 10px
+        //   h3
+        //     font-size: 25px
+        //     text-transform: capitalize
+        //     letter-spacing: 2px
+        //     //margin-top: 0
+        //     padding-top: 0
+        //     &:before 
+        //       content: ''
+        //       display: block
+        //       width: 100%
+        //       position: relative
+        //       top: 40px
+        //       border: none
+        //       border-bottom: 2px solid $white
+        //       animation: fadein 1.3s forwards
+        //       transition: all 1s linear 
+        //   h3, p
+        //     text-align: center
+        //     //padding: 30px
+        //     max-width: 300px
+        //   p
+        //     padding-top: 0
+        //   @media screen and (max-width: 45em)
+        //     float: none
+        //     margin-bottom: -20px
     #openHours
       padding: 30px
       color: $white
