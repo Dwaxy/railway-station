@@ -6,7 +6,7 @@ const Header = ({ className }) => {
     <section id="header">
 
       <div className="logo">
-        
+        Logo
       </div>
     </section>
   )

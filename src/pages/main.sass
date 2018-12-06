@@ -18,7 +18,8 @@
 // footer, info. FB meta
 
 @import url('https://fonts.googleapis.com/css?family=Diplomata+SC')
-//font-family: 'Diplomata SC', cursive
+
+@import "./mixins.scss"
 
 $white: #f5eded
 
@@ -38,92 +39,88 @@ $main-black: #ffff
     opacity: 1
     margin-left: 0px
     
-
 html, body
   margin: 0
   padding: 0
   box-sizing: border-box
   min-height: 100%
   list-style: none
+  font-family: 'Diplomata SC', cursive
+  background-color: $white
+  overflow-x: hidden
   *
     letter-spacing: 1px
-    box-sizing: border-box
-  
+    //box-sizing: border-box
+    
+=img()
+  background-attachment: fixed
+  background-position: center
+  background-repeat: no-repeat
+  background-size: cover 
+    
+    
 #holder
-  //header
-  overflow: hidden
-  #header
-    width: 100%
-    max-height: 700px
-    height: 100vh
-    //background-image: url(../img/mainPlaceholder.jpeg)
-    background-image: url(../img/IMG_7524.jpg)
-    background-size: cover
-    background-repeat: no-repeat
-    object-fit: cover
-  .infoOpenhoursHolder
-    //background-image: url(../img/wood1.jpg)
-    // background-image: url(../img/IMG_7483.jpg)
-    // background-size: cover
-    background-color: black
-    height: 900px
+  .scrollSection
+    min-height: 100%
     position: relative
-    div
-      background-image: none
-    @media screen and (max-width: 45em)
-      height: 1200px !important
+    +img() 
+  #one
+    min-height: calc(100vh - 75px)
+    background-color: $white
+    #header
+      //top: center
+      //left: center
+      //placeholder
+      
+      text-align: center 
+      top: center
+      left: center
+      position: absolute
+      font-size: 60px
+  #two
+    background-color: $white
+    height: 100%
+    
     #info
-      width: 100%
-      height: 500px
-      position: relative
       .menu
-        float: left
-        min-width: 300px
-        max-width: 500px
-        width: 30%
-        height: 100%
-        //background-color: red
-        margin: 0
-        padding: 0
-        padding-top: 60px
-        li
-          width: 100%
-          height: 60px
-          list-style: none
-          text-align: center
-          cursor: pointer
-          line-height: 30px
-          color: $main-black
-          font-size: responsive
-          font-family: 'Diplomata SC', cursive
-          min-font-size: 16px
-          text-transform: capitalize
-          span
-            height: 100%
-          .selected
-            border-bottom: 2px solid $white
-      .card
-        width: 70%
-        height: 100%
-        float: right
         display: flex
+        justify-content: center
+        align-items: center
+        height: 50px
+        li
+          margin: 0 20px 0 20px
+          list-style: none
+          font-size: responsive
+          min-font-size: 10px
+          
+          cursor: pointer
+      .card
+        position: relative
+        //min-height: 500px
+        max-height: 800px
+        min-height: 500px
+        size: 100%
+        background-color: black  
+        +img()
         img
-          object-fit: cover
+          //background-color: black          
+          opacity: 0.5
+          min-height: 500px
+          min-width: 700px
+          // max-height: 800px
+          size: 100%
+          +img()
         .card-text
-          margin: 0 auto
           position: absolute
-          top: 60px
-          margin: 60px
-          h3, p
-            color: $white
-          p
-            font-size: 25px
+          top: 40%
+          z-index: 2
+          color: $white
+          margin-left: 10vw
+          font-family: arial
+          background-color: transparent
           h3
             font-size: 25px
-            text-transform: capitalize
-            letter-spacing: 2px
-            //margin-top: 0
-            padding-top: 0
+            text-transform: capatilise
             &:before 
               content: ''
               display: block
@@ -134,105 +131,199 @@ html, body
               border-bottom: 2px solid $white
               animation: fadein 1.3s forwards
               transition: all 1s linear 
-          //max-height: 300px
-          //min-width: 100%
-        // margin: 0 auto
-        // display: inline-block
-        // left: center
-        // margin-top: 60px
-        // display: flex
-        // color: $white
-        // display: none //----
-        // //flex-wrap: wrap
-        // // box-shadow: 0px 17px 40px -7px rgba(0,0,0,0.75)
-        // @media screen and (max-width: 45em)
-        //   display: block
-        //   width: 100%
-        //   box-shadow: none 
-        //   .left, .right
-        //     float: none
-        //     margin: 0 auto
-        //     padding: 0 !important
-        // .left, .right
-        //   width: 50%
-        //   min-width: 320px
-        //   height: 100%
-        //   //background-color: green
-        //   //background-color: $white
-        //   // @media screen and (max-width: 5em) 
-        //   //   min-width: 100%
-        //   //   height: 300px
-        //   //   margin: 0 auto
-        //   //   float: none
-        // .left
-        //   display: flex
-        //   justify-content: center
-        //   flex-direction: column
-        //   padding-right: 30px
-        //   //border-top-left-radius: 10px
-        //   //border-bottom-left-radius: 10px
-        //   img
-        //     object-fit: cover
-        //     max-height: 300px
-        //     min-width: 100%
-        // .right
-        //   float: right
-        //   padding-left: 30px
-        //   //border-top-right-radius: 10px
-        //   //border-bottom-right-radius: 10px
-        //   h3
-        //     font-size: 25px
-        //     text-transform: capitalize
-        //     letter-spacing: 2px
-        //     //margin-top: 0
-        //     padding-top: 0
-        //     &:before 
-        //       content: ''
-        //       display: block
-        //       width: 100%
-        //       position: relative
-        //       top: 40px
-        //       border: none
-        //       border-bottom: 2px solid $white
-        //       animation: fadein 1.3s forwards
-        //       transition: all 1s linear 
-        //   h3, p
-        //     text-align: center
-        //     //padding: 30px
-        //     max-width: 300px
-        //   p
-        //     padding-top: 0
-        //   @media screen and (max-width: 45em)
-        //     float: none
-        //     margin-bottom: -20px
-    #openHours
-      padding: 30px
+          p
+            font-size: 20px
+  
+  #three
+    //placeholder
+    min-height: 600px
+    height: 50vw
+    h1
+      text-align: center
       color: $white
-      height: 300px
-      bottom: 0
+      top: 35%
       left: center
-      .holder
-        max-width: 300px
-        margin: 0 auto
-      p
-        font-size: 30px
-      .dates
-        margin: 0 auto
-        border-left: 1px solid $white
-        margin: 30px
-        margin-left: 90px
-        span
-          width: 100%
-          display: block
-          padding: 30px
-          padding-left: 30px
-          font-size: 20px
-  #groupPh, #map
-    width: 100%
-    height: 500px
-    border: 1px solid black
-  #footer
-    width: 100%
-    height: 80px
-    position: fixed
-    bottom: 0
+      font-size: 60px
+  //   width: 100%
+  //   max-height: 700px
+  //   height: 100vh
+  //   //background-image: url(../img/mainPlaceholder.jpeg)
+  //   background-image: url(../img/IMG_7524.jpg)
+  //   background-size: cover
+  //   background-repeat: no-repeat
+  //   object-fit: cover
+  // .infoOpenhoursHolder
+  //   //background-image: url(../img/wood1.jpg)
+  //   // background-image: url(../img/IMG_7483.jpg)
+  //   // background-size: cover
+  //   background-color: black
+  //   height: 900px
+  //   position: relative
+  //   div
+  //     background-image: none
+  //   @media screen and (max-width: 45em)
+  //     height: 1200px !important
+  //   #info
+  //     width: 100%
+  //     height: 500px
+  //     position: relative
+  //     .menu
+  //       float: left
+  //       min-width: 300px
+  //       max-width: 500px
+  //       width: 30%
+  //       height: 100%
+  //       //background-color: red
+  //       margin: 0
+  //       padding: 0
+  //       padding-top: 60px
+  //       li
+  //         width: 100%
+  //         height: 60px
+  //         list-style: none
+  //         text-align: center
+  //         cursor: pointer
+  //         line-height: 30px
+  //         color: $main-black
+  //         font-size: responsive
+  //         font-family: 'Diplomata SC', cursive
+  //         min-font-size: 16px
+  //         text-transform: capitalize
+  //         span
+  //           height: 100%
+  //         .selected
+  //           border-bottom: 2px solid $white
+  //     .card
+  //       width: 70%
+  //       height: 100%
+  //       float: right
+  //       display: flex
+  //       img
+  //         object-fit: cover
+  //       .card-text
+  //         margin: 0 auto
+  //         position: absolute
+  //         top: 60px
+  //         margin: 60px
+  //         h3, p
+  //           color: $white
+  //         p
+  //           font-size: 25px
+  //         h3
+  //           font-size: 25px
+  //           text-transform: capitalize
+  //           letter-spacing: 2px
+  //           //margin-top: 0
+  //           padding-top: 0
+  //           &:before 
+  //             content: ''
+  //             display: block
+  //             width: 100%
+  //             position: relative
+  //             top: 40px
+  //             border: none
+  //             border-bottom: 2px solid $white
+  //             animation: fadein 1.3s forwards
+  //             transition: all 1s linear 
+  //         //max-height: 300px
+  //         //min-width: 100%
+  //       // margin: 0 auto
+  //       // display: inline-block
+  //       // left: center
+  //       // margin-top: 60px
+  //       // display: flex
+  //       // color: $white
+  //       // display: none //----
+  //       // //flex-wrap: wrap
+  //       // // box-shadow: 0px 17px 40px -7px rgba(0,0,0,0.75)
+  //       // @media screen and (max-width: 45em)
+  //       //   display: block
+  //       //   width: 100%
+  //       //   box-shadow: none 
+  //       //   .left, .right
+  //       //     float: none
+  //       //     margin: 0 auto
+  //       //     padding: 0 !important
+  //       // .left, .right
+  //       //   width: 50%
+  //       //   min-width: 320px
+  //       //   height: 100%
+  //       //   //background-color: green
+  //       //   //background-color: $white
+  //       //   // @media screen and (max-width: 5em) 
+  //       //   //   min-width: 100%
+  //       //   //   height: 300px
+  //       //   //   margin: 0 auto
+  //       //   //   float: none
+  //       // .left
+  //       //   display: flex
+  //       //   justify-content: center
+  //       //   flex-direction: column
+  //       //   padding-right: 30px
+  //       //   //border-top-left-radius: 10px
+  //       //   //border-bottom-left-radius: 10px
+  //       //   img
+  //       //     object-fit: cover
+  //       //     max-height: 300px
+  //       //     min-width: 100%
+  //       // .right
+  //       //   float: right
+  //       //   padding-left: 30px
+  //       //   //border-top-right-radius: 10px
+  //       //   //border-bottom-right-radius: 10px
+  //       //   h3
+  //       //     font-size: 25px
+  //       //     text-transform: capitalize
+  //       //     letter-spacing: 2px
+  //       //     //margin-top: 0
+  //       //     padding-top: 0
+  //       //     &:before 
+  //       //       content: ''
+  //       //       display: block
+  //       //       width: 100%
+  //       //       position: relative
+  //       //       top: 40px
+  //       //       border: none
+  //       //       border-bottom: 2px solid $white
+  //       //       animation: fadein 1.3s forwards
+  //       //       transition: all 1s linear 
+  //       //   h3, p
+  //       //     text-align: center
+  //       //     //padding: 30px
+  //       //     max-width: 300px
+  //       //   p
+  //       //     padding-top: 0
+  //       //   @media screen and (max-width: 45em)
+  //       //     float: none
+  //       //     margin-bottom: -20px
+  //   #openHours
+  //     padding: 30px
+  //     color: $white
+  //     height: 300px
+  //     bottom: 0
+  //     left: center
+  //     .holder
+  //       max-width: 300px
+  //       margin: 0 auto
+  //     p
+  //       font-size: 30px
+  //     .dates
+  //       margin: 0 auto
+  //       border-left: 1px solid $white
+  //       margin: 30px
+  //       margin-left: 90px
+  //       span
+  //         width: 100%
+  //         display: block
+  //         padding: 30px
+  //         padding-left: 30px
+  //         font-size: 20px
+  // #groupPh, #map
+  //   width: 100%
+  //   height: 500px
+  //   border: 1px solid black
+  // #footer
+  //   width: 100%
+  //   height: 80px
+  //   position: fixed
+  //   bottom: 0

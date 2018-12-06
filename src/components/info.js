@@ -4,11 +4,12 @@ import CrossfadeImage from 'react-crossfade-image'
 //like in the netlify cms blog example
 
 const InfoData = (props) => (
-  <div className="card">
+  <div className="card" >
     
-    {/*<img src={props.data.image} alt=""/>*/}
+    {/*<img src={props.data.image} alt=""/>
     <CrossfadeImage src={props.data.image} timingFunction={"ease-in-out"} style={{objectFit: "cover", width: "100%", height: "100%"}}/>
-
+    */}
+    <img src={props.data.image} alt=""/>
     <div className="card-text">
       <h3>{props.data.heading}</h3>
       <p>{props.data.description}</p>
