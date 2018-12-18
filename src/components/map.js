@@ -3,8 +3,10 @@ import React from 'react';
 const Map = () => {
   return (
     <section id="map">
-    <iframe width="600" height="450" 
-src="https://www.google.com/maps/embed/v1/place?q=springfield+railway+station&key=..."></iframe> 
+      <div className="map-holder">
+         <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDO0KrL5-vOaHzB3ig-keYi-_5buPjJmws&callback=initMap"
+          type="text/javascript"></script>
+      </div>
     </section>
   )
 }
