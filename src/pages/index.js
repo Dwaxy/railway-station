@@ -32,9 +32,11 @@ export default class Index extends Component {
           <Info data={infoData} />
         </div>
         
+        {/*
         <div id="three" className="scrollSection" style={{backgroundImage: `url(${groupPh})`}}>
           <h1>Group Photo</h1>
         </div>
+        */}
         
         <div id="four" className="scrollSection">
           <Map />
