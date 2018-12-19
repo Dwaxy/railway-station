@@ -13,7 +13,7 @@ src="https://www.google.com/maps/embed/v1/place?q=springfield+railway+station&ke
       height="100%" 
       frameborder="0" 
       style={{border: 0}} 
-      allowFullscreen></iframe>
+      ></iframe>
   )
 }
 
