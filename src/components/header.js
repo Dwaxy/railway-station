@@ -1,12 +1,13 @@
 import React from 'react'
 import Img from "gatsby-image"
+import logo from "../img/logo.jpg"
 
 const Header = ({ className }) => {
   return (
     <section id="header">
 
       <div className="logo">
-        Logo
+        <img src={logo} />
       </div>
     </section>
   )

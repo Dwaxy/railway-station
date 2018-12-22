@@ -9,7 +9,7 @@ import Map from '../components/map.js'
 import Footer from '../components/footer.js'
 
 import heroImage from '../img/IMG_7524.jpg'
-import groupPh from '../img/D.jpg'
+// import groupPh from '../img/D.jpg'
 
 import './main.sass'
 
