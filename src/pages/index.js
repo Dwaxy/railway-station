@@ -9,6 +9,7 @@ import Map from '../components/map.js'
 import Footer from '../components/footer.js'
 
 import heroImage from '../img/IMG_7524.jpg'
+import fbIcon from '../img/fb.png'
 // import groupPh from '../img/D.jpg'
 
 import './main.sass'
@@ -40,6 +41,24 @@ export default class Index extends Component {
         
         <div id="four" className="scrollSection">
           <Map />
+        </div>
+        
+        <div id="five" className="fotter">
+        
+          <div className="fb">
+              <a href="https://www.facebook.com/73connection/">
+                <img src={fbIcon} alt=""/>
+              </a>
+          </div> 
+          
+          <div className="phCred">
+            <a href=""></a>
+          </div>
+          
+          <div className="address">
+            <span>Springfield Railway Station, King St, 7681</span>
+          </div>
+          
         </div>
         
       </section>

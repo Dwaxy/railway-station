@@ -7,7 +7,8 @@ const Header = ({ className }) => {
     <section id="header">
 
       <div className="logo">
-        <img src={logo} />
+        <h1>Springfield Railway</h1>
+        <h2>New Zealand</h2>
       </div>
     </section>
   )
