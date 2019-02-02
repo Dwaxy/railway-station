@@ -72,30 +72,29 @@ export default class Index extends Component {
 
 
 export const IndexTemplateQuery = graphql`
-query IndexQuery {
-  markdownRemark {
-    frontmatter {
-      key
-      groceries {
-        description
-        heading
-        image
-        name
-      }
-      cafe {
-        description
-        heading
-        image
-        name
-      }
-      collectibles {
-        description
-        heading
-        image
-        name
+  query IndexQuery {
+    markdownRemark {
+      frontmatter {
+        key
+        groceries {
+          description
+          heading
+          image
+          name
+        }
+        cafe {
+          description
+          heading
+          image
+          name
+        }
+        collectibles {
+          description
+          heading
+          image
+          name
+        }
       }
     }
   }
-}
-
 `
