@@ -6,10 +6,20 @@ const short = require(`postcss-short`)
 
 module.exports = {
   siteMetadata: {
-    title: 'Gatsby + Netlify CMS Starter',
+    title: 'Springfield Railway Hub',
+    siteUrl: `https://springfieldrailwayhub.nz/`,
+    
+    titleTemplate: "%s · The Real Hero",
+    description:
+      "Springfield Railway Station, King St, Springfield 7681. Cafe, Groceries and Collectibles.",
+    url: "https://springfieldrailwayhub.nz", // No trailing slash allowed!
+    image: "/img/preview.png", // Path to your image you placed in the 'static' folder
+    facebook: '73connection',
+    ogLanguage: 'en_US',
   },
   plugins: [
     'gatsby-plugin-react-helmet',
+    'gatsby-plugin-sitemap',
     //'gatsby-plugin-sass',
     {
       resolve: 'gatsby-plugin-sass',

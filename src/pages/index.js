@@ -1,12 +1,12 @@
 import React, {Component} from 'react'
-import Helmet from 'react-helmet'
 import { graphql } from 'gatsby'
 import Header from '../components/header.js'
 import Info from '../components/info.js'
-import OpenHours from '../components/openHours.js'
+// import OpenHours from '../components/openHours.js'
 //import GroupPh from '../components/groupPh.js'
 import Map from '../components/map.js'
-import Footer from '../components/footer.js'
+import SEO from '../components/SEO.js'
+import Img from "gatsby-image"
 
 import heroImage from '../img/IMG_7524.jpg'
 import fbIcon from '../img/fb.png'
@@ -25,6 +25,9 @@ export default class Index extends Component {
     
     return (
       <section id="holder">
+        
+        <SEO />
+        
         <div id="one" className="scrollSection" style={{backgroundImage: `url(${heroImage})`}}>
           <Header />
         </div>
