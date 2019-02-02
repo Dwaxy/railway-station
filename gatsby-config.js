@@ -12,7 +12,7 @@ module.exports = {
     description:
       "Springfield Railway Station, King St, Springfield 7681. Cafe, Groceries and Collectibles.",
     url: "https://springfieldrailwayhub.nz", // No trailing slash allowed!
-    image: "/img/preview.png", // Path to your image you placed in the 'static' folder
+    image: "/preview.png", // Path to your image you placed in the 'static' folder
     facebook: '73connection',
     ogLanguage: 'en_US',
   },
