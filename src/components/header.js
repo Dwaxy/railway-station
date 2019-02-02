@@ -7,7 +7,7 @@ const Header = ({ className }) => {
     <section id="header">
 
       <div className="logo">
-        <h1>Springfield Railway</h1>
+        <h1>Springfield Railway Station</h1>
         <h2>New Zealand</h2>
       </div>
     </section>

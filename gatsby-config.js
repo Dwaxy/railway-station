@@ -6,7 +6,7 @@ const short = require(`postcss-short`)
 
 module.exports = {
   siteMetadata: {
-    title: 'Springfield Railway Hub',
+    title: 'Springfield Railway Station',
     siteUrl: `https://springfieldrailwayhub.nz/`,
     
     description:
