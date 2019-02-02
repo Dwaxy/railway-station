@@ -9,7 +9,6 @@ module.exports = {
     title: 'Springfield Railway Hub',
     siteUrl: `https://springfieldrailwayhub.nz/`,
     
-    titleTemplate: "%s · The Real Hero",
     description:
       "Springfield Railway Station, King St, Springfield 7681. Cafe, Groceries and Collectibles.",
     url: "https://springfieldrailwayhub.nz", // No trailing slash allowed!
