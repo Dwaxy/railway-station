@@ -1,18 +1,18 @@
 ---
 key: info-section
 cafe:
-  description: 'its a very nice cafe, it really is. very nice'
-  heading: Cafe title that has been updated live
+  description: Great coffee and food
+  heading: Friendly cafe
   image: /img/img_7481.jpg
   name: cafe
 collectibles:
-  description: 'many things to collect '
-  heading: 'I love colecting '
+  description: Something for everyone
+  heading: New and old collectibles and presents
   image: /img/img_3979.jpg
   name: collectibles
 groceries:
   description: eat your greens
-  heading: blabla
+  heading: OPEN Tuesday - Saturday 8am - 1.30pm
   image: /img/img_7526.jpg
   name: groceries
 ---
