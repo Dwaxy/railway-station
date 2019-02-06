@@ -53,13 +53,14 @@ export default class Index extends Component {
                 <img src={fbIcon} alt=""/>
               </a>
           </div> 
-          
-          <div className="phCred">
-            <a href=""></a>
-          </div>
-          
+            
           <div className="address">
             <span>Springfield Railway Station, King St, 7681</span>
+          </div>
+          
+          <div className="phCred">
+            <span>Photos thanks to:</span>
+            <a href="www.clearwaterphotograpy.co.nz">www.clearwaterphotograpy.co.nz</a>
           </div>
           
         </div>
