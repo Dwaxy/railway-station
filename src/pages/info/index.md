@@ -11,7 +11,7 @@ collectibles:
   image: /img/img_3979.jpg
   name: collectibles
 groceries:
-  description: eat your greens
+  description: ''
   heading: OPEN Tuesday - Saturday 8am - 1.30pm
   image: /img/img_7526.jpg
   name: groceries
